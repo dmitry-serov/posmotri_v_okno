@@ -101,6 +101,7 @@ ol {
 .search-form__checkbox-list {
   display: inline-flex;
   gap: 18px;
+  padding-inline-start: 3px;
 }
 
 .search-form__textfield {
@@ -125,7 +126,7 @@ ol {
   inline-size: 100%;
   display: flex;
   flex-direction: column;
-  gap: 21px;
+  gap: 20px;
 }
 
 .title {
@@ -142,8 +143,13 @@ ol {
 
 .content__list {
   position: relative;
-  block-size: 298px;
-  overflow-y: scroll;
+  block-size: 301px;
+  overflow-y: auto;
+  padding-block-start: 2px;
+}
+
+.content__list-item {
+  padding-inline: 1px 2px;
 }
 
 .content__list-item:not(:last-child) {
@@ -155,6 +161,7 @@ ol {
   color: #fff;
   border: 1px solid #1b1919;
   text-decoration-line: none;
+  margin-inline: 1px;
 }
 
 .content__video-card {
@@ -168,6 +175,8 @@ ol {
 }
 
 .content__video-card-title {
+  object-fit: cover;
+  object-position: center;
   font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
@@ -204,15 +213,25 @@ ol {
 
 .more-button {
   padding: 6px;
-  min-inline-size: 399px;
+  min-inline-size: 396px;
+  margin: 0 2px 2px;
 }
 
 .content__card-link_current,
+.content__video-card:active,
 .button:active {
   background-color: #545050;
 }
 
+.search-form__textfield:focus,
+.content__card-link:focus,
+.button:focus
+ {
+  outline: none;
+}
+
 .search-form__label:has(:not(:active):focus-visible),
+.content__card-link:focus-visible,
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
@@ -222,22 +241,18 @@ ol {
   background-color: #fff;
 }
 
+.search-form__textfield:active,
+ {
+  border-color: #fff;
+  outline: none;
+}
+
 .search-form__checkbox-list .search-form__label:hover,
 .button:not(:active):hover,
-.content__card-link:hover {
+.content__card-link:not(:active):hover {
   text-decoration-line: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
-}
-
-.search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__textfield:active,
-.content__card-link:focus-visible {
-  border-color: #fff;
-  outline: none;
 }
 
 .search-form__pseudo-checkbox {
