@@ -6,7 +6,10 @@
   "name": "posmotri_v_okno",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "postcss": "^8.4.47",
+    "postcss-scrollbar": "^0.5.1"
+  },
   "scripts": {
     "test": "echo 'Привет!'",
     "check": "prettier --check './**/*.{html,css,js}'",
