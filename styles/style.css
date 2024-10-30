@@ -225,8 +225,7 @@ ol {
 
 .search-form__textfield:focus,
 .content__card-link:focus,
-.button:focus
- {
+.button:focus {
   outline: none;
 }
 
@@ -241,8 +240,7 @@ ol {
   background-color: #fff;
 }
 
-.search-form__textfield:active,
- {
+.search-form__textfield:active {
   border-color: #fff;
   outline: none;
 }
