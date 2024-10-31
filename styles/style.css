@@ -191,6 +191,8 @@ ol {
 }
 
 .content__video-card-thumbnail {
+  object-fit: cover;
+  object-position: center;
   width: 195px;
   height: 101px;
 }
